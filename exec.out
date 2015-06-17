@@ -1,0 +1,3 @@
+===BEGIN hash_part_elim_38===
+/queries/optimizer/pll_optimizer/hash_part_elim.tcf{38}: FAIL
+===TESTSET hash_part_elim_38 EXECUTED OK===

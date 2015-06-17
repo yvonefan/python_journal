@@ -1,0 +1,40 @@
+520|0 0 00113885 1 271 01:25:31|DEBUG:QASQL:TDS:4|0:cmd_succeed {end {}} cmd_done
+520|0 0 00113885 1 272 01:25:31|DEBUG:/queries/optimizer/pll_optimizer/hash_part_elim.tcf:tet_startup:3|0:***END tcf_start
+400|0 38 1 01:25:32 20150112|IC Start
+200|0 38 01:25:32 20150112|TP Start
+520|0 38 00113885 1 1 01:25:32|assertion_id qpg_opt_0490:56
+520|0 38 00113885 1 2 01:25:32|to purge the statement cache
+520|0 38 00113885 1 3 01:25:32|Expected partition elimination to happen
+520|0 38 00113885 1 4 01:25:32|Expected message //Eliminated not shown in showplan output for query select * from B where (b1 = 10 and b2 = 11 and b1 > 2)  or
+520|0 38 00113885 1 5 01:25:32| (b1 = 9 and b2 = 10) or (b1 = 10 and b2 = 13 and b1 = 11)
+520|0 38 00113885 1 6 01:25:32|Fail count = 1
+520|0 38 00113885 1 7 01:25:32|Expected fail_count 0 and got 1
+520|0 38 00113885 1 8 01:25:32|DEBUG:/queries/optimizer/pll_optimizer/hash_part_elim.tcf:testcase-38:3|0:***BEGIN testcase code
+520|0 38 00113885 1 9 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command {set parallel_degree 1}
+520|0 38 00113885 1 10 01:25:32|DEBUG:QASQL:SQL:3|0:set parallel_degree 1
+520|0 38 00113885 1 11 01:25:32|DEBUG:QASQL:TDS:4|0:cmd_succeed {end {}} cmd_done
+520|0 38 00113885 1 12 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command { select * from B where (b1 = 10 and b2 = 11 and b1 > 2)  or (b1 = 9 and b2 = 10) or (b1 = 10 and b2 = 13 and b1
+520|0 38 00113885 1 13 01:25:32|DEBUG:QASQL:TCL:4|1: = 11)}
+520|0 38 00113885 1 14 01:25:32|DEBUG:QASQL:SQL:3|0: select * from B where (b1 = 10 and b2 = 11 and b1 > 2)  or (b1 = 9 and b2 = 10) or (b1 = 10 and b2 = 13 and b1 = 11)
+520|0 38 00113885 1 15 01:25:32|DEBUG:QASQL:TDS:4|0:{header {{b1 16 7 int 4 {}} {b2 16 7 int 4 {}} {b3 16 7 int 4 {}}}} {data {10 11 12}} {data {10 11 12}} {end {2}} cmd_done
+520|0 38 00113885 1 16 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command {set parallel_degree 20}
+520|0 38 00113885 1 17 01:25:32|DEBUG:QASQL:SQL:3|0:set parallel_degree 20
+520|0 38 00113885 1 18 01:25:32|DEBUG:QASQL:TDS:4|0:cmd_succeed {end {}} cmd_done
+520|0 38 00113885 1 19 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command { select * from B where (b1 = 10 and b2 = 11 and b1 > 2)  or (b1 = 9 and b2 = 10) or (b1 = 10 and b2 = 13 and b1
+520|0 38 00113885 1 20 01:25:32|DEBUG:QASQL:TCL:4|1: = 11)}
+520|0 38 00113885 1 21 01:25:32|DEBUG:QASQL:SQL:3|0: select * from B where (b1 = 10 and b2 = 11 and b1 > 2)  or (b1 = 9 and b2 = 10) or (b1 = 10 and b2 = 13 and b1 = 11)
+520|0 38 00113885 1 22 01:25:32|DEBUG:QASQL:TDS:4|0:{header {{b1 16 7 int 4 {}} {b2 16 7 int 4 {}} {b3 16 7 int 4 {}}}} {data {10 11 12}} {data {10 11 12}} {end {2}} cmd_done
+520|0 38 00113885 1 23 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command {set plan for show_elimination_xml to message on}
+520|0 38 00113885 1 24 01:25:32|DEBUG:QASQL:SQL:3|0:set plan for show_elimination_xml to message on
+520|0 38 00113885 1 25 01:25:32|DEBUG:QASQL:TDS:4|0:cmd_succeed {end {}} cmd_done
+520|0 38 00113885 1 26 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command {truncate table curplan}
+520|0 38 00113885 1 27 01:25:32|DEBUG:QASQL:SQL:3|0:truncate table curplan
+520|0 38 00113885 1 28 01:25:32|DEBUG:QASQL:TDS:4|0:cmd_succeed {end {}} cmd_done
+520|0 38 00113885 1 29 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command {dbcc purgesqlcache}
+520|0 38 00113885 1 30 01:25:32|DEBUG:QASQL:SQL:3|0:dbcc purgesqlcache
+520|0 38 00113885 1 31 01:25:32|DEBUG:QASQL:TDS:4|0:cmd_succeed {servermsg {2528 1 10 {DBCC execution completed. If DBCC printed error messages, contact a user with System
+520|0 38 00113885 1 32 01:25:32|DEBUG:QASQL:TDS:4|1: Administrator (SA) role.
+520|0 38 00113885 1 33 01:25:32|DEBUG:QASQL:TDS:4|0:} {} {} 1 6 ZZZZZ}} {end {}} cmd_done
+520|0 38 00113885 1 34 01:25:32|DEBUG:QASQL:TCL:4|0:sqlsa1 command {select * from B where (b1 = 10 and b2 = 11 and b1 > 2)  or (b1 = 9 and b2 = 10) or (b1 = 10 and b2 = 13 and b1 =
+520|0 38 00113885 1 35 01:25:32|DEBUG:QASQL:TCL:4|1: 11)}
+
